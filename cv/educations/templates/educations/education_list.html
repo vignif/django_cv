@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2><a href="{% url 'educations:education_list' %}">Education Experience</a></h2>
+
+<ul>
+    {% for education in object_list %}
+    <li>{{ education.name }} ({{ education.pages }} Pages)
+        <a href="{% url 'educations:education_edit' education.id %}">edit</a>
+        <a href="{% url 'educations:education_delete' education.id %}">delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'educations:education_new' %}">New</a>
+
+{% endblock %}
