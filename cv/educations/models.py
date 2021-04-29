@@ -4,7 +4,7 @@ from django.urls import reverse
 
 class Education(models.Model):
     name = models.CharField(max_length=200)
-    pages = models.IntegerField()
+    grades = models.IntegerField()
 
     def __str__(self):
         return self.name

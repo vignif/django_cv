@@ -6,7 +6,7 @@ from .models import Education
 class EducationForm(ModelForm):
     class Meta:
         model = Education
-        fields = ['name', 'pages']
+        fields = ['name', 'grades']
 
 def education_list(request, template_name='educations/education_list.html'):
     education = Education.objects.all()
